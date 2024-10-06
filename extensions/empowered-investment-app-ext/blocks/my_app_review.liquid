@@ -1,0 +1,19 @@
+<div style="color: {{ block.settings.color }}" class="review_app_outer" id="review_app_outer">
+  {% assign count = 0 %}
+{% render "app_snippet_review", count:count %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "store review",
+    "target": "section",
+    "stylesheet": "app.css",
+    "javascript": "reviewsData.js",
+    "settings": [
+        { "label": "Color button bg", "id": "color", "type": "color", "default": "#008000" },
+        { "label": "Color button text", "id": "colort", "type": "color", "default": "#ffffff" },
+        { "label": "Color for text", "id": "colortext", "type": "color", "default": "#000000" }
+    ]
+  }
+{% endschema %}

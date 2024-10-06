@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "8e284634376204a6662e36ae1c1a6cba"
+name = "empowered-investment-app"
+application_url = "https://identifying-h-challenge-odd.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "shop23project.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://identifying-h-challenge-odd.trycloudflare.com/auth/callback",
+  "https://identifying-h-challenge-odd.trycloudflare.com/auth/shopify/callback",
+  "https://identifying-h-challenge-odd.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false

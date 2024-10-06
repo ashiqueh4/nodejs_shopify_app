@@ -1,0 +1,36 @@
+<div style="color: {{ block.settings.color }}" class="review_app_outer">
+{% render "app_snippet" %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "my app test",
+    "target": "section",
+    "enabled_on": {
+      "templates": ["index"]
+    },
+    "stylesheet": "app.css",
+    "javascript": "app.js",
+    "settings": [
+        { "label": "Color button bg", "id": "color", "type": "color", "default": "#008000" },
+        { "label": "Color button text", "id": "colort", "type": "color", "default": "#ffffff" },
+        { "label": "Color for text", "id": "colortext", "type": "color", "default": "#000000" }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .form_check_colbtn button#pobrn {
+    width: 130px;
+    padding: 10px;
+    background:{{ block.settings.color }};
+    border: none;
+    border-radius: 10px;
+    color: {{ block.settings.colort }};
+}
+.test_my_ps{
+  color: {{ block.settings.colortext }};
+
+}
+</style>
